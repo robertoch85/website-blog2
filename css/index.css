@@ -1,0 +1,183 @@
+@import "style.css";
+@import "header.css";
+@import "footer.css";
+
+* {
+  box-sizing: content-box;
+}
+
+/********* grid container ************/
+.grid-container{
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 150px auto auto auto auto auto auto auto 20px;
+  grid-gap: 5px;
+  grid-template-areas:
+    "hd"
+    "new-1"
+    "new-2"
+    "new-3"
+    "new-4"
+    "new-5"
+    "new-6"
+    "subs"
+    "ft";
+}
+
+/************ main content ************/
+.new {
+  display: flex;
+  height: 300px;
+  border-radius: 15px;
+  color: black;
+  padding: 30px 30px 30px 30px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+#new-1 {
+  grid-area: new-1;
+  background-image: url("../img/main-martian.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#new-2 {
+  grid-area: new-2;
+  background-image: url("../img/man-arms.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#new-3 {
+  grid-area: new-3;
+  background-image: url("../img/main-martian.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#new-4 {
+  grid-area: new-4;
+  background-image: url("../img/man-arms.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#new-5 {
+  grid-area: new-5;
+  background-image: url("../img/main-martian.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#new-6 {
+  grid-area: new-6;
+  background-image: url("../img/man-arms.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.new h3{
+  padding-left: 10px;
+}
+
+.new p{
+  padding-left: 10px;
+}
+
+.link {
+  color: darkblue;
+  text-decoration: underline;
+}
+
+.transparency {
+  background-color: rgba(200, 200, 200, 0.8);
+  min-width: 50%;
+  max-width: 600px;
+  text-align: center;
+  border-radius: 15px;
+}
+
+.newsletter {
+  grid-area: subs;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
+  padding-bottom: 20px;
+}
+
+.newsletter input {
+  width: 30%;
+}
+
+.formulario {
+  display: flex;
+  flex-flow: column nowrap;
+  padding: 5px;
+}
+
+input[type=text], button[type=button] {
+  width: 100%;
+  padding: 10px;
+  margin: 5px 5px;
+  border: 1px solid #fffff0;
+  box-sizing: border-box;
+}
+
+input[type=tex] {
+  text-align: left;
+}
+
+button[type=button] {
+  text-align: center;
+  text-transform: uppercase;
+  cursor: pointer;
+  background-color: #e54b4b;
+  border: 1px solid #e54b4b;
+  color: #fff;
+}
+
+button[type=button]:hover {
+  background-color: transparent;
+  border: 1px solid #e54b4b;
+  color: #e54b4b;
+}
+
+/********* different size screens ************/
+@media screen and (min-width: 700px) {
+
+  .grid-container{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 150px auto auto auto auto 20px;
+    grid-gap: 8px;
+    grid-template-areas:
+      "hd hd"
+      "new-1 new-2"
+      "new-3 new-4"
+      "new-5 new-6"
+      "subs subs"
+      "ft ft";
+  }
+
+ .new {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 300px;
+   border-radius: 15px;
+   color: black;
+   padding: 30px 30px 30px 30px;
+ }
+
+}
